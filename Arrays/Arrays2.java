@@ -72,29 +72,46 @@ public class Arrays2 {
 
 //OTRA FORMA CON EL BUCLE FOR:
 
-for (int i=0;i<arr1.length;i++{
-    if (arr1[i]==arr2[i]){
-        correcto=true;
-
-    }else {
-        correcto=false;
+/* boolean correcto = true;  // Inicia la variable como verdadera, asumiendo que los arrays son iguales
+for (int i = 0; i < arr1.length; i++) {
+    if (arr1[i] != arr2[i]) {  // Si hay una diferencia entre los elementos
+        correcto = false;  // Se establece en falso si no son iguales
+        break;  // Salir del bucle, porque no hace falta seguir comparando
     }
+}
 
-})
+if (correcto) {
+    System.out.println("Los arrays son iguales");
+} else {
+    System.out.println("No son iguales");
+}
 
 
+//OTRA  FORMA CON EQUALS:
+
+if (arr1.equals(arr2)){
+    System.out.println("Son iguales");
+
+}else{
+
+    System.out.println("No son iguales"); 
+}
+
+ */
+ // a=b; -> Significa que el valor de b se guarda en a -> Esto con ARRAYS NO SE PUEDE HACER (las formas correctas de hacerlo son con ARRAYCOPY y FOR )
+   //a==b; ->  Esto me devuelve "true" si son iguales
 
 
 //METODO SYSTEM ARRAYCOPY (Alternativa para copiar los arrays sin usar el bucle FOR)
 
-public static void main(String[] args) {
+/* public static void main(String[] args) {
     // Se crean dos arrays de enteros con valores específicos
     int [] arr1 = {1, 2, 3, 4, 5}; 
-    int [] arr2 = {10, 20, 30, 40, 50}; // Se crea otro array con valores específicos
+    int [] arr2 = {10, 20, 30, 40, 50}; // Se crea otro array con valores específicos */
 
 //arraycopy(arr1, posicion desde la que quiero copiar que es por defecto 0, arr2, posicion a la que copiar, numero de elementos que quiero copiar(2)  )
 //el arr1 es vector de origen, arr2 es el vector destino, la posicion 0, empiezo en la 0 y me copias 2 elementos
-    System.arraycopy(arr1, 0, arr2, 0, 2); //Cópiame el array1 desde la posición 0 en el array2 desde la posición 0 y copiame 2 elementos.
+    //System.arraycopy(arr1, 0, arr2, 0, 2); //Cópiame el array1 desde la posición 0 en el array2 desde la posición 0 y copiame 2 elementos.
 
 //LOS 5 PARÁMETROS SON:
     //1º VECTOR ORIGEN
@@ -103,16 +120,28 @@ public static void main(String[] args) {
     //POSICIÓN EN LA QUE EMPEZAR A COPIAR
     //NÚMERO DE ELEMENTOS A COPIAR
 
+  
+
 //tambiñen se podría copiar el array completo así: 
 // System.arraycopy(arr1, 0, arr2, 0, arr2.length);
 
-    System.out.println(arr2[0]);
+    /* System.out.println(arr2[0]);
     System.out.println(arr2[1]);
     System.out.println(arr2[2]);
     System.out.println(arr2[3]);
     System.out.println(arr2[4]);
 
 }
+} */
+
+//MATRICES
+
+public static void main(String[] args){
+    int [] [] matriz = { {0,1,2}, {3,4,5}, {6,7,8}};
+
+    String [] [] pacientes = { {"NUSS: 1"}, "PRIORIDAD: 5", "TEMPERATURA: 27"}. {"NUSS: 2, "PRIORIDAD: 3", "TEMPERATURA: 30"}
+
+
+System.out.println("DATOS DEL PACIENTE 0: "pacientes[0]")
+
 }
-
-
