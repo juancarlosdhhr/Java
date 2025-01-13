@@ -8,6 +8,9 @@ public class Proyecto1Hospital {
     public static final int SINTOMA_MIN = 0, SINTOMA_MAX = 3;
     public static final int EXPLORACION_MIN = 0, EXPLORACION_MAX = 3;
     public static final int TRAUMATICA_MIN=0, TRAUMATICA_MAX=3;
+    public static final int FIEBRE_MIN=0, FIEBRE_MAX=3;
+    public static final int CONFUSION_MIN=0, CONFUSION_MAX=0;
+    public static final int PRIORIDAD_MIN=0, PRIORIDAD_MAX=5;
     public static void main(String[] args) {
         // DEFINIMOS VARIABLES
         Scanner sc = new Scanner(System.in);
@@ -104,7 +107,7 @@ public class Proyecto1Hospital {
 
                 // Verificar si es entero // verificar rango
                 if (sc.hasNextInt()) {
-                    sintomaextInt();
+                    sintoma = sc.nextInt();
                     // Validamos rango
                     if ((sintoma >= TRAUMATICA_MIN) && (sintoma <= TRAUMATICA_MAX)) {
                         correcto = false;
@@ -130,7 +133,7 @@ public class Proyecto1Hospital {
 
                 // Verificar si es entero // verificar rango
                 if (sc.hasNextInt()) {
-                    sintomaextInt();
+                    sintoma = sc.nextInt();
                     // Validamos rango
                     if ((sintoma >= TRAUMATICA_MIN) && (sintoma <= TRAUMATICA_MAX)) {
                         correcto = false;
@@ -146,8 +149,65 @@ public class Proyecto1Hospital {
             } while (correcto);
             break;
             case 3:
+            do {
                 System.out.println("Síntoma del paciente = CONFUSIÓN O DESORIENTACIÓN");
-                break;
+                System.out.println("¿Exploración?");
+                System.out.println("Intoxicación por drogas o alcohol (0)");
+                System.out.println("Deshidratación severa (1)");
+                System.out.println("Accidente cerebrovascular (2)");
+                System.out.println("Hipoglucemia severa (3)");
+
+                // Verificar si es entero // verificar rango
+                if (sc.hasNextInt()) {
+                    sintoma = sc.nextInt();
+                    // Validamos rango
+                    if ((sintoma >= CONFUSION_MIN) && (sintoma <= CONFUSION_MAX)) {
+                        correcto = false;
+                    } else {
+                        correcto = true;
+                        System.out.println("Error fuera de rango. Entre " + TRAUMATICA_MIN + " y " + TRAUMATICA_MAX);
+                    }
+                } else {
+                    System.out.println("Error de tipo de datos. Tienes que introducir un entero entre " + TRAUMATICA_MIN + " y " + TRAUMATICA_MAX);
+                    correcto = true;
+                    sc.next();
+                }
+            } while (correcto);
+            //Aquí ya no haría falta poner un break porrque al ser el ultimo caso el switch directamente se rompe
         }
+
+        //Pedir nivel de prioridad
+        System.out.println("Escribe el nivel de prioridad:");
+        System.out.println("(Numero entre " + PRIORIDAD_MIN + " y " + PRIORIDAD_MAX + ")");
+
+        // Control de errores
+        do { //Hasta que el numero introducido no esté dentro del raqngo me lo va a estar pidiendo.
+            // Verificar el tipo de datos
+            if (sc.hasNextInt()) { //Verificamos que el numero introducido sea un entero
+                nuss = sc.nextInt(); //Si es un entero lo leo
+                // Verificamos el rango
+                if ((nuss >= PRIORIDAD_MIN) && (nuss <= PRIORIDAD_MAX)) {
+                    // Rango correcto
+                    correcto = false; //¿Está bien? correcto = false para salir del bucle
+                } else {
+                    // Rango erróneo
+                    correcto = true; // ¿No está bien? correcto continúa en true 
+                    System.out.println("Error en el rango. Entre " + PRIORIDAD_MIN+ " y " + PRIORIDAD_MAX);
+                }
+            } else {
+                System.out.println("Error de tipo de datos. Entre " + PRIORIDAD_MIN + " y " + PRIORIDAD_MAX);
+                correcto = true;
+                sc.next();
+            }
+        } while (correcto);
+
+
+        //Temperatura actual
+
+
+        //MOSTRAMOS DATOS
+
+
+
     }
 }
