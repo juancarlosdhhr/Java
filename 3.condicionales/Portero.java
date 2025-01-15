@@ -64,3 +64,45 @@ sc.close();
 //Este es el flujo básico del programa: primero pide la contraseña y la compara, 
 //luego solicita la edad si la contraseña es correcta, y con base en la edad, 
 //muestra un mensaje adecuado.
+
+
+
+
+
+
+
+
+import java.util.Scanner;  // Importa la clase Scanner para leer la entrada del usuario
+
+public class Portero {
+    public static void main(String[] args) {
+        
+        // Creamos un objeto Scanner para leer la entrada del usuario desde el teclado
+        Scanner sc = new Scanner(System.in);
+
+        // Solicitamos la contraseña
+        System.out.println("¿Y la contraseña?");  // Muestra un mensaje solicitando la contraseña
+        String secretPassword = sc.nextLine();  // Lee la contraseña ingresada por el usuario
+        
+        // Verificamos si la contraseña es correcta
+        if (secretPassword.equals("1234")) {  // Compara la contraseña ingresada con "1234"
+            // Si la contraseña es correcta, solicitamos la edad
+            System.out.println("Alto ahí, enseñeme el DNI");
+            int edad = sc.nextInt();  // Lee la edad ingresada por el usuario
+
+            // Condicional para verificar la edad y dar un mensaje adecuado
+            if (edad < 18) {
+                System.out.println("No puedes entrar hasta que cumplas 18 años");
+            } else if (edad >= 18 && edad <= 60) {
+                System.out.println("Adelante, disfrute de la velada");
+            } else if (edad > 60 && edad <= 122) {
+                System.out.println("Pase usted a la zona con asientos para que no se haga daño");
+            } else {
+                System.out.println("Tira por ahí");
+            }
+
+            // Cerramos el Scanner por buena práctica
+            sc.close();
+        }
+    }
+}

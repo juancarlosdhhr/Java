@@ -1,7 +1,7 @@
 package Arrays;
 
 public class Arrays2 {
-    /* public static void main(String[] args) {
+     public static void main(String[] args) {
         int [] arr1 = new int [10]; // Crea un array con 10 elementos, todos inicializados a 0 por defecto
         int [] arr2 = {10,20,30,40,50};// Crea un array con valores específicos
 
@@ -22,7 +22,7 @@ public class Arrays2 {
     }
 }
 
- */
+ 
 
 //ASIGNAR REFERENCIA DE ARRAY 2 A ARRAY 1
 //"Hacer que dos arrays apunten al mismo espacio de memoria"
@@ -30,7 +30,7 @@ public class Arrays2 {
 //"Referenciar el mismo array con dos variables"
 //"Vincular dos arrays para que apunten al mismo array"
 
- /* public static void main(String[] args) {
+ public static void main(String[] args) {
     int [] arr1 = {1, 2, 3, 4, 5}; 
     int [] arr2 = {10, 20, 30, 40, 50}; // Crea un array con valores específicos
 
@@ -43,11 +43,11 @@ public class Arrays2 {
 
     // Nos dará el mismo resultado: 555
 }
- */
+ 
 
 //COPIAR ARRAYS USANDO EL BUCLE FOR
 
-/* public static void main(String[] args) {
+ public static void main(String[] args) {
     // Se crean dos arrays de enteros con valores específicos
     int [] arr1 = {1, 2, 3, 4, 5}; 
     int [] arr2 = {10, 20, 30, 40, 50}; // Se crea otro array con valores específicos
@@ -67,12 +67,12 @@ public class Arrays2 {
     // Se imprime nuevamente el primer valor de arr1
     System.out.println(arr1[0]);  // Imprime arr1[0], que sigue siendo 10 (porque arr1 es una copia de arr2, no una referencia)
 }
- */
+ 
 
 
 //OTRA FORMA CON EL BUCLE FOR:
 
-/* boolean correcto = true;  // Inicia la variable como verdadera, asumiendo que los arrays son iguales
+ boolean correcto = true;  // Inicia la variable como verdadera, asumiendo que los arrays son iguales
 for (int i = 0; i < arr1.length; i++) {
     if (arr1[i] != arr2[i]) {  // Si hay una diferencia entre los elementos
         correcto = false;  // Se establece en falso si no son iguales
@@ -97,21 +97,21 @@ if (arr1.equals(arr2)){
     System.out.println("No son iguales"); 
 }
 
- */
+ 
  // a=b; -> Significa que el valor de b se guarda en a -> Esto con ARRAYS NO SE PUEDE HACER (las formas correctas de hacerlo son con ARRAYCOPY y FOR )
    //a==b; ->  Esto me devuelve "true" si son iguales
 
 
 //METODO SYSTEM ARRAYCOPY (Alternativa para copiar los arrays sin usar el bucle FOR)
 
-/* public static void main(String[] args) {
+ public static void main(String[] args) {
     // Se crean dos arrays de enteros con valores específicos
     int [] arr1 = {1, 2, 3, 4, 5}; 
     int [] arr2 = {10, 20, 30, 40, 50}; // Se crea otro array con valores específicos */
 
 //arraycopy(arr1, posicion desde la que quiero copiar que es por defecto 0, arr2, posicion a la que copiar, numero de elementos que quiero copiar(2)  )
 //el arr1 es vector de origen, arr2 es el vector destino, la posicion 0, empiezo en la 0 y me copias 2 elementos
-    //System.arraycopy(arr1, 0, arr2, 0, 2); //Cópiame el array1 desde la posición 0 en el array2 desde la posición 0 y copiame 2 elementos.
+    System.arraycopy(arr1, 0, arr2, 0, 2); //Cópiame el array1 desde la posición 0 en el array2 desde la posición 0 y copiame 2 elementos.
 
 //LOS 5 PARÁMETROS SON:
     //1º VECTOR ORIGEN
@@ -122,26 +122,32 @@ if (arr1.equals(arr2)){
 
   
 
-//tambiñen se podría copiar el array completo así: 
-// System.arraycopy(arr1, 0, arr2, 0, arr2.length);
+//También se podría copiar el array completo así: 
+ System.arraycopy(arr1, 0, arr2, 0, arr2.length);
 
-    /* System.out.println(arr2[0]);
+     System.out.println(arr2[0]);
     System.out.println(arr2[1]);
     System.out.println(arr2[2]);
     System.out.println(arr2[3]);
     System.out.println(arr2[4]);
 
 }
-} */
+}
 
 //MATRICES
 
-public static void main(String[] args){
-    int [] [] matriz = { {0,1,2}, {3,4,5}, {6,7,8}};
+public static void main(String[] args) {
+    // Inicialización de la matriz con datos de los pacientes
+    String[][] pacientes = {
+        {"NUSS: 1", "PRIORIDAD: 5", "TEMPERATURA: 27"},
+        {"NUSS: 2", "PRIORIDAD: 3", "TEMPERATURA: 30"}
+    };
 
-    String [] [] pacientes = { {"NUSS: 1"}, "PRIORIDAD: 5", "TEMPERATURA: 27"}. {"NUSS: 2, "PRIORIDAD: 3", "TEMPERATURA: 30"}
-
-
-System.out.println("DATOS DEL PACIENTE 0: "pacientes[0]")
-
+    // Imprimir los datos del primer paciente
+    System.out.println("DATOS DEL PACIENTE: " + pacientes[0][0]);  // Imprime "NUSS: 1"
+    System.out.println(pacientes[0][1] + " " + pacientes[0][2]);  // Imprime "PRIORIDAD: 5 TEMPERATURA: 27"
 }
+
+//RESULTADO ESPERADO:
+DATOS DEL PACIENTE: NUSS: 1
+PRIORIDAD: 5 TEMPERATURA: 27

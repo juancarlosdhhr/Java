@@ -11,11 +11,12 @@ public class Proyecto1Hospital {
     public static final int FIEBRE_MIN=0, FIEBRE_MAX=3;
     public static final int CONFUSION_MIN=0, CONFUSION_MAX=0;
     public static final int PRIORIDAD_MIN=0, PRIORIDAD_MAX=5;
+    public static final int TEMPERATURA_MIN=27, TEMPERATURA_MAX=45;
     public static void main(String[] args) {
         // DEFINIMOS VARIABLES
         Scanner sc = new Scanner(System.in);
-        boolean correcto = false;
-        int nuss = 0, sintoma = 0, exploracion = 0;
+        boolean correcto = true;
+        int nuss = 0, exploracion=0, sintoma = 0, prioridad=0, temperatura=0;
 
         // PEDIMOS EL NÚMERO DE LA SEGURIDAD SOCIAL
         System.out.println("Escribe el número de la seguridad social:");
@@ -184,9 +185,9 @@ public class Proyecto1Hospital {
         do { //Hasta que el numero introducido no esté dentro del raqngo me lo va a estar pidiendo.
             // Verificar el tipo de datos
             if (sc.hasNextInt()) { //Verificamos que el numero introducido sea un entero
-                nuss = sc.nextInt(); //Si es un entero lo leo
+                prioridad = sc.nextInt(); //Si es un entero lo leo
                 // Verificamos el rango
-                if ((nuss >= PRIORIDAD_MIN) && (nuss <= PRIORIDAD_MAX)) {
+                if ((prioridad >= PRIORIDAD_MIN) && (prioridad <= PRIORIDAD_MAX)) {
                     // Rango correcto
                     correcto = false; //¿Está bien? correcto = false para salir del bucle
                 } else {
@@ -203,9 +204,60 @@ public class Proyecto1Hospital {
 
 
         //Temperatura actual
+        System.out.println("Escribe tu temperatura corporal:");
+        System.out.println("(Numero entre " + TEMPERATURA_MIN + " y " + TEMPERATURA_MAX + ")");
+
+        // Control de errores
+        do { //Hasta que el numero introducido no esté dentro del raqngo me lo va a estar pidiendo.
+            // Verificar el tipo de datos
+            if (sc.hasNextInt()) { //Verificamos que el numero introducido sea un entero
+                temperatura = sc.nextInt(); //Si es un entero lo leo
+                // Verificamos el rango
+                if ((temperatura  >= TEMPERATURA_MIN) && (TEMPERATURA_MIN <= TEMPERATURA_MAX)) {
+                    // Rango correcto
+                    correcto = false; //¿Está bien? correcto = false para salir del bucle
+                } else {
+                    // Rango erróneo
+                    correcto = true; // ¿No está bien? correcto continúa en true 
+                    System.out.println("Error en el rango. Entre " + PRIORIDAD_MIN+ " y " + PRIORIDAD_MAX);
+                }
+            } else {
+                System.out.println("Error de tipo de datos. Entre " + TEMPERATURA_MIN + " y " + TEMPERATURA_MAX);
+                correcto = true;
+                sc.next();
+            }
+        } while (correcto);
+
 
 
         //MOSTRAMOS DATOS
+        System.out.println("NUSS \t SINTOMA \t EXPLORACIÓN \t NIVEL PRIORIDAD \t TEMPERATURA");
+        System.out.println("===========================================================================");
+        System.out.print(nuss);
+        switch (sintoma) {
+            case 0: System.out.print("Dolor");
+                    switch (exploracion) {
+                        case 0: System.out.print("\tDolor torácico");
+                            break;
+                        case 1: System.out.print("\tDolor abdominal");
+                            break;
+                        case 2: System.out.print("\tDolor de cabeza");
+                            break;
+                        case 3: System.out.println("\tMigraña");
+
+                    }
+                    break;
+                    
+                       
+            
+            
+            
+            
+           
+            
+
+        }
+        System.out.println(nuss + "\t" +sintoma+"\t" + exploracion + "\t" + prioridad + "\t" + temperatura);
 
 
 

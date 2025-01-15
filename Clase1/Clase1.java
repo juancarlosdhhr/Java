@@ -99,3 +99,12 @@ public class Clase1 {
 // lo lleva a una puerta lógica, lo evalúa y devuelve una solución, entonces es algo muy costoso en términos de procesamiento.
 
 //En conclusión, todo lo que podamos hacer con SWITCH le va a dar mucha más agilidad a mi código.
+
+
+
+
+
+
+
+
+
