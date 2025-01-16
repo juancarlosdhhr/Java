@@ -9,7 +9,7 @@ public class Proyecto1Hospital {
     public static final int EXPLORACION_MIN = 0, EXPLORACION_MAX = 3;
     public static final int TRAUMATICA_MIN=0, TRAUMATICA_MAX=3;
     public static final int FIEBRE_MIN=0, FIEBRE_MAX=3;
-    public static final int CONFUSION_MIN=0, CONFUSION_MAX=0;
+    public static final int CONFUSION_MIN=0, CONFUSION_MAX=3;
     public static final int PRIORIDAD_MIN=0, PRIORIDAD_MAX=5;
     public static final int TEMPERATURA_MIN=27, TEMPERATURA_MAX=45;
     public static void main(String[] args) {
@@ -247,7 +247,48 @@ public class Proyecto1Hospital {
 
                     }
                     break;
+            case 1: System.out.print("Lesión traumática");
+            switch (exploracion) {
+                case 0: System.out.print("\tFractura osea");
+                    break;
+                case 1: System.out.print("\tHerida de bala");
+                    break;
+                case 2: System.out.print("\tQuemadura");
+                    break;
+                case 3: System.out.println("\tLesión cerebral traumática");
+
+            }
+            break;
+
+
+
+            case 2: System.out.print("Fiebre alta");
+            switch (exploracion) {
+                case 0: System.out.print("\tNeumonia");
+                    break;
+                case 1: System.out.print("\tMeningitis");
+                    break;
+                case 2: System.out.print("\tInfección viral");
+                    break;
+                case 3: System.out.println("\tReacción alérgica");
                     
+            }
+            break;
+
+            case 3: System.out.print("Confusión o desorientación");
+            switch (exploracion) {
+                case 0: System.out.print("\tIntoxicación por drogas o alcohol");
+                    break;
+                case 1: System.out.print("\tDeshidratación severa");
+                    break;
+                case 2: System.out.print("\tAccidente cerebrovascular");
+                    break;
+                case 3: System.out.println("\tHipoglucemia severa");
+                    
+            }
+            
+
+      
                        
             
             
