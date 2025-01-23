@@ -51,3 +51,107 @@ System.out.println(sintoma[2]);
 
 }}
 
+//Otra forma de trabajar:
+
+public class EjemplosArrays{
+    public static int TAMANYO = 20;
+    public static void main(String[] args){
+
+        int [] exploracion =new  int [TAMANYO];
+        for (int i=0; i<TAMANYO; i++){
+            exploracion[i] = 0;
+        }
+
+    }
+
+}
+
+//imaginaros que estoy haciendo una app en la que guardo las notas de los alumnos
+public static int TAMANYO = 20;
+public static void main(String[] args){
+    int [] notas = {10,5,3,2,10};
+
+    //Si quiero mostrar las notas por pantalla:
+
+    for (int i=0;i<notas.length;i++){
+
+        System.out.println("El alumno" +i + "ha sacado un " +notas[i]);
+
+    }
+
+   
+
+}
+
+//Para sacar la nota media:
+
+
+//imaginaros que estoy haciendo una app en la que guardo las notas de los alumnos
+public static final int TAMANYO =5;
+public static void main(String[] args){
+    int [] notas = new int[TAMANYO];
+    Scanner sc = new Scanner(System.in);
+    int acumulado =0;
+    //PEDIMOS LA NOTA AL USUARIO
+    for(int i=0;i<notas.length;i++) {
+        System.out.println("Introduce la nota" +i); //Quiero que sea el usuario quien introduzca la nota
+        notas[i]=sc.nextInt();
+
+
+    }
+
+
+    for (int i=0;i<notas.length;i++){
+
+        acumulado += notas[i];
+    
+
+    }
+    acumulado = acumulado / notas.length;
+    System.out.println("La nota media es " +acumulado);
+
+   
+
+}
+
+//Ahora en lugar de hacerlo con un FOR lo haremos con un WHILE:
+
+
+public static final int TAMANYO =5;
+public static void main(String[] args){
+    int [] notas = new int[TAMANYO];
+    Scanner sc = new Scanner(System.in);
+    int acumulado =0;
+    boolean salir = false; //Mientras el usuario no seleccione "salir"
+    //PEDIMOS LA NOTA AL USUARIO
+
+WHILE (!salir){
+int i = 0; //Lo usamos como contador;
+System.out.println("Dime un valor");
+notas[i]=sc.nextInt();
+System.out.println("Quieres introducir más notas? (0-Sí/1-No)");
+
+
+}
+
+
+    for(int i=0;i<notas.length;i++) {
+        System.out.println("Introduce la nota" +i); //Quiero que sea el usuario quien introduzca la nota
+        notas[i]=sc.nextInt();
+
+
+    }
+
+
+    for (int i=0;i<notas.length;i++){
+
+        acumulado += notas[i];
+    
+
+    }
+    acumulado = acumulado / notas.length;
+    System.out.println("La nota media es " +acumulado);
+
+   
+
+}
