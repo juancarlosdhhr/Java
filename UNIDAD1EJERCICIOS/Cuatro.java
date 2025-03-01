@@ -3,7 +3,7 @@
 variables X e Y de tipo int, dos variables N y M de tipo double y asigna a cada una un
 valor. A continuación muestra por pantalla:
 El valor de cada variable.
-La suma X + Y
+ 
 La diferencia X – Y
 El producto X * Y
 El cociente X / Y

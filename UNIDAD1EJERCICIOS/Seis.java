@@ -24,3 +24,14 @@ public class Seis {
 
 
 }
+
+
+// Solución = 128
+
+
+/* El operador >>> es un desplazamiento a la derecha sin signo.
+
+🔹 ¿Qué hace i >>>= 1?
+
+Mueve los bits de i una posición a la derecha.
+Como >>> es sin signo, rellena con ceros en la izquierda. */
