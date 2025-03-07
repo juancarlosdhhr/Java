@@ -1,73 +1,121 @@
+import java.util.Scanner;
+
 public class Clase3 {
-    
+
+    public static void main(String[] args) {
+        
+        // Ejemplo 1: Comprobación de mayor o menor de edad
+        Scanner scanner = new Scanner(System.in);
+        
+        // Pedir la edad al usuario
+        System.out.print("Introduce tu edad: ");
+        int edad = scanner.nextInt();
+        
+        // Comprobamos si el usuario es mayor o menor de edad
+        if (edad >= 18) {
+            // Si la edad es mayor o igual a 18, la persona es mayor de edad
+            System.out.println("El usuario es mayor de edad.");
+        } else if (edad >= 0 && edad <= 17) {
+            // Si la edad es mayor o igual a 0 y menor o igual a 17, la persona es menor de edad
+            System.out.println("El usuario es menor de edad.");
+        } else {
+            // Si la edad es un valor negativo, significa que es un valor incorrecto
+            System.out.println("Error: Edad no válida.");
+        }
+
+        System.out.println("Fin del programa.");
+
+        
+        // Ejemplo 2: Comprobación de si un número es positivo, negativo o cero
+        System.out.print("\nIntroduce un número: ");
+        int num = scanner.nextInt();
+        
+        if (num > 0) {
+            // Si el número es mayor que 0, entonces es positivo
+            System.out.println("El número es positivo.");
+        } else if (num < 0) {
+            // Si el número es menor que 0, entonces es negativo
+            System.out.println("El número es negativo.");
+        } else {
+            // Si el número es 0, mostramos que el número es cero
+            System.out.println("El número es 0.");
+        }
+
+        
+        // Ejemplo 3: Comprobación si el número es par o impar
+        System.out.print("\nIntroduce un número para comprobar si es par o impar: ");
+        int num2 = scanner.nextInt();
+        
+        if (num2 % 2 == 0) {
+            // Si el resto de la división del número por 2 es 0, es un número par
+            System.out.println("El número es par.");
+        } else {
+            // Si el resto de la división del número por 2 no es 0, es un número impar
+            System.out.println("El número es impar.");
+        }
+
+        
+        // Ejemplo 4: Comparación de cadenas de texto con 'equals' y 'equalsIgnoreCase'
+        scanner.nextLine();  // Limpiar el buffer del scanner para evitar problemas al leer texto
+        System.out.print("\nIntroduce un texto: ");
+        String textoUsuario = scanner.nextLine();
+        
+        String texto = "Hola";
+        
+        // Usamos equals para comparar exactamente las cadenas (teniendo en cuenta mayúsculas/minúsculas)
+        if (texto.equals(textoUsuario)) {
+            System.out.println("¡Enhorabuena! Has introducido el texto correcto.");
+        } else {
+            System.out.println("El texto no es correcto.");
+        }
+
+        // Usamos equalsIgnoreCase para comparar las cadenas sin tener en cuenta mayúsculas y minúsculas
+        if (texto.equalsIgnoreCase(textoUsuario)) {
+            System.out.println("¡Enhorabuena! Has introducido el texto correctamente, ignorando mayúsculas/minúsculas.");
+        } else {
+            System.out.println("El texto no es correcto, incluso ignorando mayúsculas/minúsculas.");
+        }
+
+        
+        // Ejemplo 5: Uso de booleano en condicionales
+        boolean a = true;
+        
+        // Usamos la variable booleana 'a' directamente en el if
+        if (a) {
+            // Si 'a' es true, ejecutamos este bloque
+            System.out.println("\nEl valor de 'a' es true.");
+        } else {
+            // Si 'a' es false, ejecutamos este bloque
+            System.out.println("\nEl valor de 'a' es false.");
+        }
+
+        // Usamos la negación de la variable 'a' con '!'
+        if (!a) {
+            // Si 'a' es false (porque usamos '!a'), ejecutamos este bloque
+            System.out.println("\nEl valor de 'a' es false.");
+        } else {
+            // Si 'a' es true, ejecutamos este bloque
+            System.out.println("\nEl valor de 'a' es true.");
+        }
+        
+        scanner.close(); // Cerramos el scanner para liberar recursos
+    }
 }
 
 
+/* Resumen de las Estructuras Condicionales:
+
+if: Ejecuta el bloque si la condición es verdadera.
+        
+else if: Ejecuta si el bloque anterior (if) no se cumple, pero la condición de else if es verdadera.     
+
+else: Ejecuta si ninguna de las condiciones anteriores se cumple.
 
 
-condicionales sirven para hacer una comprobacion de algo y kluego ejecuto el codigo, tambien casos de uso o para bucles, entre otras cosas. 
-este curso hay que aprender pprincipalmente>: CONDICIONALES, BUCLES Y PROGRAMACION ORIENTADA A OBVJETOS ...los demas temas es mas de lo mismo asi que es fundamental entender
-bien esos 3 pilares. 
+Equivalencias en español (simplificadas):
 
-En java tenemos 2 bloques de condicionales: 
-1. if , else if y else
-2. switch
+if: "Si"
 
-Realiza un ejercicio en el cual se le pida al usuario una edad y el programa me tenga quedevolver si es mayor de edad o si es menor de edad
- entonces, como se comprueba algo en java? usando la estrucutra if 
-
- los operdores que se pueden usar son : ==, !=, >, <, >=,<=, , &&, ||
-
-
- voy a poner un numero negatico, temdremos que hacer una comprobacion
-
- )((
-
- )((
-    entonces creamos metodo scanner ponemos una variable para almacenar el numero y saco el mendsale introduca un numero por pantalla
- )EQUALS () --> metodo clase string es el == del string
-   
-    enonces vamos a uusar if(edad >=18) o tambien >17
-   
-    si usamos una variable boolean boleana = edad >= 18 ; se guarda un true o un false,
-   
-    lo que pasa es que ren un if para entrar dentro del if nos tendria que dar siempre un true
-   
-    System.out.pintln "el suuario es  anmyor de edad"
-   
-    system.out.printl (Fin del programa")
-   
-    else nunca lleva expresion logica . else significa cuando la expresion del if da false ahi entramos en falsed,     SIN IF NO HAY ELSE
-   
-    El usuario es menor de edad)
-  
-  un else if --> ES UN CONDICION QUE AGREGAMOS AL IF EN CASO DE QUE NO SE CUMPLA, PERO ES OTRA CONDICION que se va a jeter tambien cuando de true)
+else if: "Y si" o "Si no, pero..."
  
- 
-   entonces copmprobaremos si edad >=0 && edad <=17 
- 
-   system.our.prtintl el usuario es menor de edad
- 
- 
-   si ponemos un else ademas, system oput printl, "error"
- 
- 
-   Otro ejercicio: diferencia if else if:
- 
-   crea un programa en el cuakl comopruebes que un numero sea positivo o negativo y a su vez comprobar si un numero es par o impar:
- 
-   entonces si yo divido un numero entre dos y es entero o el resto es 0 es par, si no es impar)
-
-    entonces creamos metodo scanner ponemos una variable para almacenar el numero y saco el mendsale introduca un numero por pantalla
-
-    voiy a poner if (num>0 el numero es positivo
-    
-    y ahora pongo un else if porque voy a escribir otra condicion
-
-    el numero es negativo
-
-    else, el numero es 0.
-
-    a ver la cuestion yo queiro que me indiques si if es "si", else if es "y si" y si else es "si ni no" ¿esa seria la equivalencia en español?
-
-    
+else: "Si no" (Cuando no se cumple ninguna condición anterior) */
