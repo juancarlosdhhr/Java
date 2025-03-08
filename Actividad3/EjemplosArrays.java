@@ -123,35 +123,69 @@ public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
     int acumulado =0;
     boolean salir = false; //Mientras el usuario no seleccione "salir"
+    int mas = 0;
+    int notasIntroducidas = 0;
+
+
     //PEDIMOS LA NOTA AL USUARIO
 
-WHILE (!salir){
+while (!salir){ //Defino un while que hasta que el usuario nos diga que quiere salir  irña en un bucle
+    //dando vueltas diciendo "Dime un valor"
 int i = 0; //Lo usamos como contador;
 System.out.println("Dime un valor");
-notas[i]=sc.nextInt();
+notas[notasIntroducidas]=sc.nextInt(); //Dicho valor lo guardará en notasIntroducidas
 System.out.println("Quieres introducir más notas? (0-Sí/1-No)");
+mas = sc.nextInt(); //Pregunta si quiere más
+notasIntroducidas +=1; //Si lo ha podido introducir lo marca como que lo ha introducido
+if (mas==1){
+    salir= true; //Y en caso de que quiera salir
+
+
+} 
 
 
 }
 
 
-    for(int i=0;i<notas.length;i++) {
-        System.out.println("Introduce la nota" +i); //Quiero que sea el usuario quien introduzca la nota
-        notas[i]=sc.nextInt();
+}
 
 
-    }
+   
 
-
-    for (int i=0;i<notas.length;i++){
-
-        acumulado += notas[i];
-    
-
-    }
     acumulado = acumulado / notas.length;
     System.out.println("La nota media es " +acumulado);
 
    
 
 }
+
+
+//EN RESUMEN:
+
+//Un array es como si fueran muchas variables en una misma
+
+//Para definirlo:
+
+int [] notas = new int[TAMANYO];
+
+//Para recorrerlo:
+
+//1º opción:
+notas[2] =7;
+
+//2º opción: Hacerlo con un FOR
+Scanner sc = new Scanner(System.in);
+for(int i=0; i<TAMANYO;i++){
+    notas[i]=sc.nextInt; // Con esto recojo los datos que introduce directamente el usuario
+
+}
+
+//Otra forma mas sencilla de hacerlo:
+
+notas[0] = 10; //Asigno directamente un valor a cada variable
+notas[1] = 0;
+notas[2] = 4;
+
+
+
+//notas.length equivale a TAMANYO
