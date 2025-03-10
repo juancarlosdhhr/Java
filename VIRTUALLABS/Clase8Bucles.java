@@ -186,3 +186,8 @@ System.out.println("Contraseña correcta");
 
 }
 }
+
+
+//La ventaja del WHILE es que es mas personalizable, ya que podemos ponerle otro texto
+//personalizado "Error. Introduzca de nuevo la contraseña", y no simplemente repetir en bucle
+//"Introduzca la contraseña"
