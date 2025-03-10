@@ -209,7 +209,7 @@ public class Clase9Bucles {
  Scanner scn = new Scanner(System.in);
 
  do {
-     System.out.println("Introduzca un nÃºmero");
+     System.out.println("Introduzca un numero");
      num = scn.nextInt(); //0
      suma += num; // suma = 45
  } while (num != 0); //FALSE
@@ -222,7 +222,7 @@ public class Clase9Bucles {
 
                                     /* EJERCICIO 18 */
 
- //Introduza numero hasta introducir un 0 y mostrar la media de los nÃºmeros
+ //Introduza numero hasta introducir un 0 y mostrar la media de los numeros
         //Contador -> una variable, generalmente inicilizada en 0
 
         int num;
@@ -236,13 +236,13 @@ public class Clase9Bucles {
             num = scn.nextInt();
             if (num < 0) {
                 suma += num; //suma = 10 + 20
-                cont++; //2
+                cont++; // cont++ es lo mismo que cont = cont + 1
             }
         } while (num < 0);
 
         media = (float) suma / cont;
 
-        System.out.println("La media de todos los nÃºmeros es: " + media);
+        System.out.println("La media de todos los numeros es: " + media);
 
     }
 }
@@ -264,7 +264,7 @@ public class Clase9Bucles {
         for(int i = 100;i>=0;i-=2){//i = i - 2
             System.out.println(i);
             if(i % 10 == 8){
-                contador++;
+                contador++; //
             }
         }
 
@@ -330,7 +330,7 @@ System.out.println("La suma total es: " + suma);
 }
 
 
-/* EJERCICIO 22 */
+                                        /* EJERCICIO 22 */
 
 //n = 5
         /*
@@ -360,7 +360,11 @@ System.out.println("La suma total es: " + suma);
  
 
 
- /* EJERCICIO 23 */
+                                        /* EJERCICIO 23 */
+                                //PARA TRABAJAR LOS BUCLES ANIDADOS//
+
+/* Dibuja un cuadrado de n elementos de lado utilizando *. Los n elementos los introduce el usuario 
+por pantalla.
 
   //n = 5
         /*
@@ -378,8 +382,8 @@ System.out.println("La suma total es: " + suma);
          System.out.println("Introduzca el valor de n");
          n = scn.nextInt();
  
-         for (int j = 1; j <= n; j++) {
-             for (int i = 1; i <= n; i++) {
+         for (int j = 1; j <= n; j++) { //Controla las filas
+             for (int i = 1; i <= n; i++) { //Controla las columnas
                  System.out.print("*");
              }
              System.out.print("\n"); //SALTO DE LINEA AL FINAL DE LA FILA
