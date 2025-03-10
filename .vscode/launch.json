@@ -1,0 +1,413 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Arrays",
+            "request": "launch",
+            "mainClass": "Arrays",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Arrays2",
+            "request": "launch",
+            "mainClass": "Arrays2",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Clase2",
+            "request": "launch",
+            "mainClass": "Clase2",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Clase3",
+            "request": "launch",
+            "mainClass": "Clase3",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Clase4",
+            "request": "launch",
+            "mainClass": "Clase4",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Clase5",
+            "request": "launch",
+            "mainClass": "Clase5",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Clase6",
+            "request": "launch",
+            "mainClass": "Clase6",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Clase7",
+            "request": "launch",
+            "mainClass": "Clase7",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Clase8Bucles",
+            "request": "launch",
+            "mainClass": "Clase8Bucles",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "MiClase",
+            "request": "launch",
+            "mainClass": "MiClase",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "PROYECTO1HOSPITALCOMENTADO",
+            "request": "launch",
+            "mainClass": "PROYECTO1HOSPITAL.PROYECTO1HOSPITALCOMENTADO",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Proyecto1Hospital",
+            "request": "launch",
+            "mainClass": "PROYECTO1HOSPITAL.Proyecto1Hospital",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Catorce",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Catorce",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Cinco",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Cinco",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Cuatro",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Cuatro",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Dieciocho",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Dieciocho",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Dieciseis",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Dieciseis",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Diecisiete",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Diecisiete",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Diez",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Diez",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Doce",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Doce",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Dos",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Dos",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Nueve",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Nueve",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Ocho",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Ocho",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Once",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Once",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Quince",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Quince",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Seis",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Seis",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Siete",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Siete",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Trece",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Trece",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Tres",
+            "request": "launch",
+            "mainClass": "UNIDAD1EJERCICIOS.Tres",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Catorce(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Catorce",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Cinco(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Cinco",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Cuatro(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Cuatro",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Diecinueve",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Diecinueve",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Dieciocho(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Dieciocho",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Dieciseis(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Dieciseis",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Diecisiete(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Diecisiete",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Diez(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Diez",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Doce(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Doce",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Dos(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Dos",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Nueve(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Nueve",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Ocho(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Ocho",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Once(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Once",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Quince(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Quince",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Seis(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Seis",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Siete(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Siete",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Trece(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Trece",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Tres(1)",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Tres",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Uno",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Uno",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Veinte",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Veinte",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Veinticinco",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Veinticinco",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Veinticuatro",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Veinticuatro",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Veintidos",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Veintidos",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Veintiseis",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Veintiseis",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Veintitres",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Veintitres",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Veintiuno",
+            "request": "launch",
+            "mainClass": "UNIDAD2EJERCICIOS.Veintiuno",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Videojuego",
+            "request": "launch",
+            "mainClass": "Videojuego",
+            "projectName": "Java_4ef20c17"
+        },
+        {
+            "type": "java",
+            "name": "Bucles",
+            "request": "launch",
+            "mainClass": "bucles.Bucles",
+            "projectName": "Java_4ef20c17"
+        }
+    ]
+}
