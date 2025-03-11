@@ -69,7 +69,7 @@ public class Clase9Bucles {
 
 
 
-                            //EJERCICIO 13: --> De momento no lo podemos hacer porque aun no hemos visto
+                                        //EJERCICIO 13
                             //numeros aleatorios
                             
                             Como creamos en número Random
@@ -82,7 +82,7 @@ public class Clase9Bucles {
          * */
 
 
-         int n = (int) ((Math.random() * 100) + 1);
+         int n = (int) ((Math.random() * 100) + 1); 
          int intentos = 10;
          int intento_actual = 1;
          boolean adivinado = false;
@@ -392,3 +392,32 @@ por pantalla.
      }
  }
  
+
+
+ /* EJERCICIO 24
+  * 
+
+
+
+  *
+  **
+  ***
+  ****
+  *****
+
+
+
+  */
+
+  for(int j = 1; j<=5;j++) {
+
+        for(int i = 1; i<=j;i++){ // j=5
+            System.out.println("*"); // i= 1 j=5
+
+        }System.out.println("");
+  }
+
+
+
+
+  2024 12 10 1:42
