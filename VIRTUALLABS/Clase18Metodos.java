@@ -245,56 +245,60 @@ System.out.println("El volumen del cilindro es: " +volumenCilindro(r,h));
 
 //OTRO EJERCICIO
 
-static String decimalBinario(int numeroDecimal){
+import java.util.Scanner;
 
-    String binario= "";
-    int resto;
+public class Main {
 
-    if(numeroDecimal == 0){
-        binario = "0";
+    // Método para convertir un número decimal a binario
+    static String decimalBinario(int numeroDecimal) {
+        String binario = "";
+        int resto;
 
-    }else{
-        //Mientras que el numero decimal sea mayor que 0
-        while(numeroDecimal>0) {
-            resto = numeroDecimal % 2; //Obtiene el resto diviendo por 1 (0/1)
-            binario = resto + binario; //Agrega el resto al inicio de la cadena
-            numeroDecimal = numeroDecimal / 2;
+        if (numeroDecimal == 0) {
+            binario = "0";
+        } else {
+            while (numeroDecimal > 0) {
+                resto = numeroDecimal % 2; // Obtiene el resto dividiendo por 2 (0 o 1)
+                binario = resto + binario; // Agrega el resto al inicio de la cadena
+                numeroDecimal = numeroDecimal / 2; // Divide entre 2
+            }
         }
 
-
+        return binario;
     }
 
-    return binario;
+    // Método para convertir un número binario (String) a decimal (int)
+    static int binarioDecimal(String numeroBinario) {
+        int decimal = 0;
+        int multiplicador = 1; // Representa las potencias de 2 (1, 2, 4, 8, ...)
 
-}
+        // Recorremos el número binario desde el último dígito hasta el primero
+        for (int i = numeroBinario.length() - 1; i >= 0; i--) { 
+            char digito = numeroBinario.charAt(i); // Obtiene el carácter en la posición i
 
+            if (digito == '1') { 
+                decimal += multiplicador; // Suma la potencia de 2 correspondiente
+            }
 
-static int binarioDecimal(String numeroBinario){
-//1010011
-int decimal = 0;
-char digito;
-int multiplicador = 1; // Representa las potencias de 2 (1,2,4,8,...)
+            multiplicador *= 2; // Multiplica por 2 en cada iteración
+        }
 
-for (int = numeroBinario.length()-1;i>0;i--); //1º -> i=6, 2º -> i=5....
-    digito = numeroBinario.charAt(i);
-
-
-    //Si el digito es 1
-    if(digito = '1'){
-        decimal = decimal + multiplicador;  // decimal += multiplicador
-
-//Actualizar el multiplicador (potencia de 2)
-        multiplicador = multiplicador *2; //multiplicador*=2
+        return decimal;
     }
-}
 
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
 
-public static void main (String [] args) {
+        System.out.println("Introduce un número decimal para convertir a binario:");
+        int decimal = scn.nextInt();
+        System.out.println("Binario: " + decimalBinario(decimal));
 
-//Método que convierta un número decimal a binario
-//Método que convierta un número binario a decimal
+        System.out.println("Introduce un número binario para convertir a decimal:");
+        String binario = scn.next();
+        System.out.println("Decimal: " + binarioDecimal(binario));
 
-
+        scn.close();
+    }
 }
 
 
@@ -334,15 +338,146 @@ public static void main (String [] args) {
 
     }
     
-    
 
 
 
 
 
 
+//OTRO EJERCICIO
+
+
+/* Se pide crear una matriz 4x4 de numeros enteros que inicalmente esta vacia, nos piden
+ * hacer un menu de opxiones.
+ * 
+ * 1. Crear una matriz, con numeros rellenados por el usuario (sin metodos)
+ * 2. Sumar una fila que se pedirá al usuario (controlar que se elija una correcta)
+ * 3.  Sumar los numeros de una columna que se pedirá al usuario (controlar que se elija una correcta)
+ * 4.Sumar la diagonal principal
+ * 5.Sumar la diagonal inversa
+ * 6.La media de todos los valores de la matriz
+ * 
+ */
+
+
+ import java.util.Scanner;
+
+ public class Main {
+     static int sumarFila(int[][] matriz, int fila) {
+         int suma = 0;
+         suma = 0;
+         for (int i = 0; i < matriz[fila - 1].length; i++) {
+             suma += matriz[fila][i];
+         }
+ 
+         return suma;
+     }
+ 
+     static int sumarColumna(int[][] matriz, int columna) {
+         int suma = 0;
+         for (int i = 0; i < matriz.length; i++) {
+             suma += matriz[i][columna - 1];
+         }
+         return suma;
+     }
+ 
+     static int diagonalPrincipal(int[][] matriz) {
+         int suma = 0;
+         for (int i = 0; i < matriz.length; i++) {
+             suma += matriz[i][i];
+ 
+         }
+         return suma;
+     }
+ 
+     static int diagonalInversa(int[][] matriz) {
+         int suma = 0;
+         for (int i = 0; i < matriz.length; i++) {
+             for (int j = matriz.length - 1; j >= 0; j--) {
+                 suma += matriz[i][j];
+             }
+         }
+         return suma;
+     }
+ 
+     static float mediaMatriz(int[][] matriz) {
+         int suma = 0;
+         float media;
+         int cont = 0;
+         for (int i = 0; i < matriz.length; i++) {
+             for (int j = 0; j < matriz[i].length; j++) {
+                 suma += matriz[i][j];
+                 cont++;
+             }
+         }
+         media = (float) suma / cont;
+         return media;
+     }
+ 
+     public static void main(String[] args) {
+         /*
+          * Se pide crear una matriz 4x4 de números enteros que inicialmente esta vacía,
+          * nos piden hacer un menú de opciones
+          * - 1. Crear una matriz, con números rellenados por el usuario (sin métodos)
+          * - 2. Sumar una fila que se pedirá al usuario (controlar que se elija una correcta)
+          * - 3. Sumar los números de una columna que se pedirá al usuario(controlar qeu se elija una correcta)
+          * - 4. Sumar la diagonal principal
+          * - 5. Sumar la diagonal inversa
+          * - 6. La media de todos los valores de la matriz
+          * */
+ 
+         int[][] matriz = new int[4][4];
+         Scanner scn = new Scanner(System.in);
+         int opcion;
+         int fila;
+         int columna;
+ 
+         System.out.println("Introduzca una de las siguientes opciones:");
+         System.out.println("1. Crear una matriz, con números rellenados por el usuario");
+         System.out.println("2. Sumar una fila que se pedirá al usuario (controlar que se elija una correcta)");
+         System.out.println("3. Sumar los números de una columna que se pedirá al usuario(controlar que se elija una correcta)");
+         System.out.println("4. Sumar la diagonal principal");
+         System.out.println("5. Sumar la diagonal inversa");
+         System.out.println("6. La media de todos los valores de la matriz");
+         opcion = scn.nextInt();
+ 
+         switch (opcion) {
+             case 1:
+                 System.out.println("Introduzca los números en la matriz");
+                 for (int i = 0; i < matriz.length; i++) {
+                     for (int j = 0; j < matriz[i].length; j++) {
+                         System.out.println("Introduzca el valor para [" + i + "][" + j + "]");
+                         matriz[i][j] = scn.nextInt();
+                     }
+                 }
+                 break;
+             case 2:
+                 System.out.println("Introduza la fila");
+                 fila = scn.nextInt();
+                 System.out.println(sumarFila(matriz,fila));
+                 break;
+             case 3:
+                 System.out.println("Introduza la columna");
+                 columna = scn.nextInt();
+                 System.out.println(sumarColumna(matriz,columna));
+                 break;
+             case 4:
+                 System.out.println(diagonalPrincipal(matriz));
+                 break;
+             case 5:
+                 System.out.println(diagonalInversa(matriz));
+                 break;
+             case 6:
+                 System.out.println(mediaMatriz(matriz));
+                 break;
+             default:
+                 System.out.println("No existe esa opción");
+         }
+ 
+ 
+     }
+ }
 
 
 
-}
 
